@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>shiridi's flames website</title>
+<meta charset="utf-8" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Shiridi Achuth">
+<meta name="description" content="Time table generator project">
+<link href="{{url_for('static',filename='Techie/style3.css')}}"rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="signin" style="align-content: right">
+		<form  action = "{{url_for('flamescode')}}" method = "POST" enctype = "multipart/form-data" style="align-content: right">
+			<h2 style="color: white ; text-align: left;">Enter the details</h2>
+			<input type="text"  placeholder="Enter your name" name="first"><br><br>
+			<input type="text"  placeholder="Enter the other person name" name="last"><br><br><br>
+			<input type="submit" value="predict"><br>
+			<br>
+			<br>
+
+		</form>
+			{% if submitted %}
+			<h2> Relation is {{value}} !!</h2>
+			{% endif %}
+
+	</div>
+
+</body>
+</html>

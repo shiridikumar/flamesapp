@@ -1,0 +1,87 @@
+body{
+	font-family: Tahoma , Geneva , sans-serif , times new roman;
+	color : #fff;
+	background-size: cover;
+	background: url(stripe-hero-background-effect-html-css.png);
+}
+.signin{
+	background: rgba(100, 100 , 100 , 100);
+	padding: 20px ;
+	width: 250px ;
+	margin: auto;
+	margin-top: 60px;
+	height: 300px;
+	margin-left: 50px;
+}
+form {
+	width: 100px;
+	text-align: center;
+}
+input[type = text]{
+	width: 250px;
+	text-align: left;
+	background: transparent;
+	border: none;
+	border-bottom: 1px  solid #fff ;
+	font-family: sans-serif, Geneva, timesnewroman;
+	font-size: 15px;
+	font-weight: 200px;
+	padding: 10px 10px ;
+	transition: border 0.5s;
+	outline: none;
+	color: #fff;
+}
+input[type = password]{
+	width: 250px;
+	text-align: left;
+	background: transparent;
+	border: none;
+	border-bottom: 1px  solid #fff ;
+	font-family: sans-serif, Geneva, timesnewroman;
+	font-size: 15px;
+	font-weight: 200px;
+	padding: 10px 10px ;
+	transition: border 0.5s;
+	outline: none;
+	color: #fff;
+}
+input[type = button]{
+	border: none;
+	width: 200px;
+	background: #fff;
+	color: #000;
+	font-size: 15px;
+	line-height: 25px;
+	padding: 10px 0px;
+	border-radius: 20px;
+	cursor: pointer;
+}
+input[type = button]:hover{
+	color: #fff;
+	background-color: #000;
+}
+h2{
+	color: #fff;
+	font-family: sans-serif , Geneva , timesnewroman;
+	font-size : 25px;
+}
+a{
+	color: yellowgreen;
+	text-decoration: blink;
+}
+a:hover{
+	color: skyblue;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+::placeholder{
+	color: aliceblue;
+	opacity: 0.7;
+}
+
+
+
+
