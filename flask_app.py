@@ -7,6 +7,7 @@ Created on Sat Mar 20 15:22:02 2021
 
 import flask
 from flask import Flask,redirect, url_for, request,render_template,send_file,jsonify
+from flask_cors import CORS, cross_origin
 
 import werkzeug
 import pandas as pd
@@ -18,14 +19,18 @@ import os
 
 
 app=Flask(__name__)
+CORS(app,support_credentials=True)
+
 
 @app.route("/")
 def flames():
     return render_template("flamesup.html")
 
 @app.route("/flamescode",methods=["POST"]) 
+@cross_origin(supports_credentials=True)
 def flamescode():
     if(request.method=="POST"):
+        """
         n=request.form["first"]
         m=request.form["last"]
     l=[]
@@ -53,8 +58,9 @@ def flamescode():
         code=code[:ind]
         temp.extend(code)
         code=temp
-    d={"f":"Friends","l":"Lovers","a":"Affectionate","m":"Marriage","e":"Enemies","s":"Siblings"}
-    return render_template("flamesup.html", submitted=True,value=d[code[0]])
+    d={"f":"Friends","l":"Lovers","a":"Affectionate","m":"Marriage","e":"Enemies","s":"Siblings"}"""
+        return jsonify(msg="hello")
+#render_template("flamesup.html", submitted=True,value=d[code[0]])
 
 @app.route('/favicon.ico') 
 def favicon(): 
